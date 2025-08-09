@@ -174,15 +174,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ProfleeditScreen(
-                          // FirstName: "",
-                          // LastName: "",
-                          country: "Pakistan",
-                          gender: "Male",
-                          day: selectedDay,
-                          month: selectedMonth,
-                          year: selectedYear,
-                        ),
+                        builder: (context) => ProfleeditScreen(),
                       ),
                     );
                   },

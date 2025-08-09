@@ -85,17 +85,7 @@ class _EmailchangeScreenState extends State<EmailchangeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ProfleeditScreen(
-                          FirstName: "",
-                          LastName: "",
-                          country: "",
-                          gender: "",
-                          day: "",
-                          month: "",
-                          phone: "",
-                          year: "",
-                          Email: EmailController.text.toLowerCase(),
-                        ),
+                        builder: (context) => ProfleeditScreen(),
                       ),
                     );
                   },

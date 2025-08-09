@@ -82,13 +82,7 @@ class ChangemobileNumberScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ProfleeditScreen(
-                            phone: phoneController.text,
-                            FirstName: "",
-                            LastName: "",
-                            country: "",
-                            gender: "",
-                          ),
+                          builder: (context) => ProfleeditScreen(),
                         ),
                       );
                     },

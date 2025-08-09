@@ -12,9 +12,7 @@ import 'package:news_app/pages/myLanguages_screen.dart';
 import 'package:news_app/pages/mycategory_screen.dart';
 
 class MoreScreen extends StatelessWidget {
-  final Email;
-  final Name;
-  const MoreScreen({super.key, this.Email, this.Name});
+  const MoreScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,8 +44,7 @@ class MoreScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>
-                            AccountSettingScreen(mail: "", name: ""),
+                        builder: (context) => AccountSettingScreen(),
                       ),
                     );
                   },

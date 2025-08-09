@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/pages/ProfleEdit_screen.dart';
+// import 'package:news_app/pages/ProfleEdit_screen.dart';
 
 class EditnameScreen extends StatefulWidget {
   const EditnameScreen({super.key});

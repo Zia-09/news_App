@@ -20,7 +20,9 @@ class CricketresultScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: Icon(Icons.cancel_outlined, size: 28),
           ),
           Padding(padding: EdgeInsets.all(10)),

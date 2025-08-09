@@ -91,12 +91,7 @@ class _ChangegenderScreenState extends State<ChangegenderScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ProfleeditScreen(
-                            gender: selectedGender!.toUpperCase(),
-                            FirstName: "",
-                            LastName: "",
-                            country: "",
-                          ),
+                          builder: (context) => ProfleeditScreen(),
                         ),
                       );
 

@@ -91,12 +91,7 @@ class _ChangecountrynameScreenState extends State<ChangecountrynameScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ProfleeditScreen(
-                            country: selectedCountry!.toUpperCase(),
-                            FirstName: "",
-                            LastName: "",
-                            gender: "",
-                          ),
+                          builder: (context) => ProfleeditScreen(),
                         ),
                       );
                     } else {

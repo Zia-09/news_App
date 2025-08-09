@@ -10,27 +10,7 @@ import 'package:news_app/pages/changeGender_screen.dart';
 import 'package:news_app/pages/changeMobile_number_screen.dart';
 
 class ProfleeditScreen extends StatelessWidget {
-  final FirstName;
-  final LastName;
-  final Email;
-  final phone;
-  final day;
-  final year;
-  final month;
-  final gender;
-  final country;
-  const ProfleeditScreen({
-    super.key,
-    this.FirstName,
-    this.LastName,
-    this.Email,
-    this.phone,
-    this.day,
-    this.month,
-    this.year,
-    this.gender,
-    this.country,
-  });
+  ProfleeditScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,12 +19,7 @@ class ProfleeditScreen extends StatelessWidget {
         leading: IconButton(
           onPressed: () => Navigator.push(
             context,
-            MaterialPageRoute(
-              builder: (context) => AccountSettingScreen(
-                mail: Email,
-                name: "$FirstName $LastName",
-              ),
-            ),
+            MaterialPageRoute(builder: (context) => AccountSettingScreen()),
           ),
           icon: Icon(Icons.arrow_back_ios),
         ),
@@ -78,12 +53,7 @@ class ProfleeditScreen extends StatelessWidget {
                     print("LastName: ${result['lastName']}");
                   }
                 },
-                child: _buildSection(
-                  "NAME",
-                  (FirstName == null || LastName == null)
-                      ? "ZIA ULLAH"
-                      : "$FirstName $LastName",
-                ),
+                child: _buildSection("NAME", "ZIA ULLAH"),
               ),
 
               InkWell(
@@ -106,10 +76,7 @@ class ProfleeditScreen extends StatelessWidget {
                     ),
                   );
                 },
-                child: _buildSection(
-                  "EMAIL ADDRESS",
-                  Email != null ? Email : "zia123@gmail.com",
-                ),
+                child: _buildSection("EMAIL ADDRESS", "zia123@gmail.com"),
               ),
               InkWell(
                 onTap: () {
@@ -120,10 +87,7 @@ class ProfleeditScreen extends StatelessWidget {
                     ),
                   );
                 },
-                child: _buildSection(
-                  "MOBILE NUMBER",
-                  phone != null ? phone : "+92-3444460774",
-                ),
+                child: _buildSection("MOBILE NUMBER", "+92-3444460774"),
               ),
               InkWell(
                 onTap: () {
@@ -132,14 +96,7 @@ class ProfleeditScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => BirthdayScreen()),
                   );
                 },
-                child: _buildSection(
-                  "BIRTHDAY",
-                  day != null && month != null && year != null
-                      ? "$month, "
-                            "$day, "
-                            "$year"
-                      : "JULY, 15, 2002",
-                ),
+                child: _buildSection("BIRTHDAY", "JULY, 15, 2002"),
               ),
               InkWell(
                 onTap: () {
@@ -150,10 +107,7 @@ class ProfleeditScreen extends StatelessWidget {
                     ),
                   );
                 },
-                child: _buildSection(
-                  "GENDER",
-                  gender != null ? gender : "MALE",
-                ),
+                child: _buildSection("GENDER", "MALE"),
               ),
               InkWell(
                 onTap: () {
@@ -164,10 +118,7 @@ class ProfleeditScreen extends StatelessWidget {
                     ),
                   );
                 },
-                child: _buildSection(
-                  "COUNTRY",
-                  country != null ? country : "PAKISTAN",
-                ),
+                child: _buildSection("COUNTRY", "PAKISTAN"),
               ),
               _buildSection("TIMEZONE", "ASIA/KARACHI", showIcon: false),
               _buildSection(

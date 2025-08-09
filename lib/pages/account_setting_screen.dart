@@ -7,9 +7,7 @@ import 'package:news_app/pages/changePassword_screen.dart';
 // import 'package:news_app/pages/changePassword_screen.dart';
 
 class AccountSettingScreen extends StatelessWidget {
-  final String name;
-  final String mail;
-  AccountSettingScreen({super.key, required this.mail, required this.name});
+  AccountSettingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,14 +36,7 @@ class AccountSettingScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => ProfleeditScreen(
-                      FirstName: "",
-                      LastName: "",
-                      country: "",
-                      gender: "",
-                    ),
-                  ),
+                  MaterialPageRoute(builder: (context) => ProfleeditScreen()),
                 );
               },
               child: ListTile(
